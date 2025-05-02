@@ -1,8 +1,5 @@
 const gulp = require('gulp');
-//html 
 const fileInclude = require('gulp-file-include');
-
-//sass
 const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
 const server = require('gulp-server-livereload');
@@ -58,6 +55,11 @@ gulp.task('html:dev', function () {
 		.pipe(changed('./build/', { hasChanged: changed.compareContents }))
 		.pipe(plumber(plumberNotify('HTML')))
 		.pipe(fileInclude(fileIncludeSetting))
+		.pipe(
+			replace(/<img(?:.|\n|\r)*?>/g, function(match) {
+				return match.replace(/\r?\n|\r/g, '').replace(/\s{2,}/g, ' ');
+			})
+		) //удаляет лишние пробелы и переводы строк внутри тега <img>
 		.pipe(
 			replace(
 				/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,

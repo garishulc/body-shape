@@ -3,7 +3,7 @@ const replace = require('gulp-replace');
 
 // HTML
 const fileInclude = require('gulp-file-include');
-const htmlclean = require('gulp-htmlclean');//минификация html файлов, т.е. написания всего кода в одну строку
+const htmlclean = require('gulp-htmlclean');
 const webpHTML = require('gulp-webp-retina-html');
 const typograf = require('gulp-typograf');
 
@@ -64,11 +64,18 @@ gulp.task('html:docs', function () {
 			.src([
 				'./src/html/**/*.html',
 				'!./**/blocks/**/*.*',
-				'!./src/html/docs/**/*.*'
+				'!./src/html/docs/**/*.*',
 			])
 			.pipe(changed('./docs/'))
 			.pipe(plumber(plumberNotify('HTML')))
 			.pipe(fileInclude(fileIncludeSetting))
+			.pipe(
+				replace(/<img(?:.|\n|\r)*?>/g, function(match) {
+					return match
+						.replace(/\r?\n|\r/g, '')
+						.replace(/\s{2,}/g, ' ');
+				})
+			) //удаляет лишние пробелы и переводы строк внутри тега <img>
 			.pipe(
 				replace(
 					/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
@@ -94,7 +101,7 @@ gulp.task('html:docs', function () {
 					},
 				})
 			)
-			.pipe(htmlclean()) // минификация html файлов
+			.pipe(htmlclean())
 			.pipe(gulp.dest('./docs/'))
 	);
 });
