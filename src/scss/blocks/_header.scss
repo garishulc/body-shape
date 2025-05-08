@@ -1,14 +1,21 @@
 .header {
-	background-color: #c0e4f4;
-	padding: 50px 0;
-
+	position: relative;
+	background-color: rgba($color: #ffffff, $alpha: 0);
+	padding: 30px 135px 0px;
 	&__row {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 }
-
+.header::before {
+	z-index: 2;
+	background-image: url("../../img/hero/hero-bg.jpg");
+	position: absolute;
+	background-position: center center; /* x y */
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 .header__nav {
 	@include tablet {
 		display: none;

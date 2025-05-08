@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+// @import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
 
 html {
 	scroll-behavior: smooth;
@@ -6,6 +6,7 @@ html {
 }
 
 body {
+	z-index: -2;
 	background-color: var(--page-bg);
 	color: var(--text-color);
 	font-family: var(--font-main);
@@ -17,7 +18,8 @@ img {
 }
 
 a {
-	color: var(--link-color);
+	color: #fff;
+	font-family: var(--font-accent);
 }
 
 code {

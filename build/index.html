@@ -15,11 +15,20 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__row">
-					<div class="logo">ВебКадеми</div>
+					<div class="header__logo">
+						<a href="index.html"
+							><picture>
+								<source srcset="./img/hero/logo.webp 1x, ./img/hero/logo@2x.webp 2x" type="image/webp" />
+								<source srcset="./img/hero/logo.png 1x, ./img/hero/logo@2x.png 2x" type="image/png" />
+								<img src="./img/hero/logo.png" alt="" /> </picture
+						></a>
+					</div>
 					<nav class="header__nav nav">
 						<ul class="nav__list">
-							<li><a href="index.html" class="active">Главная</a></li>
-							<li><a href="docs.html">Документация</a></li>
+							<li class="nav_link"><a href="index.html">Инструкторы</a></li>
+							<li class="nav_link"><a href="!#">Секции</a></li>
+							<li class="nav_link"><a href="!#">Новости</a></li>
+							<li class="nav_link"><a href="!#">Контакты</a></li>
 						</ul>
 					</nav>
 					<button class="mobile-nav-btn">
@@ -35,15 +44,17 @@
 			</ul>
 		</div>
 
-		<main class="docs">
-			<section>
-				<div class="container">
-					<h1 class="title-1">Gulp сборка для верстки сайтов</h1>
-					<p>Понятная Gulp сборка которая ускорит твою верстку в&#160;разы.</p>
+		<main class="main-page">
+			<sec tion>
+				<div class="container-half-right">
+					<picture>
+						<source srcset="./img/hero/hero-logo.webp 1x, ./img/hero/hero-logo@2x.webp 2x" type="image/webp" />
+						<source srcset="./img/hero/hero-logo.png 1x, ./img/hero/hero-logo@2x.png 2x" type="image/png" />
+						<img class="main-page__hero-logo" src="./img/hero/hero-logo.png" alt="Alt" />
+					</picture>
 				</div>
-				<img src="" alt="" />
-				<img src="" srcset="" alt="" />
-			</section>
+				<div class="bg__image"></div>
+			</sec>
 		</main>
 		<footer class="footer">
 			<div class="container">

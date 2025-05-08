@@ -77,6 +77,7 @@ gulp.task('fontsStyle', () => {
 				let newFileOnly;
 				for (var i = 0; i < fontsFiles.length; i++) {
 					// Записываем подключения шрифтов в файл стилей
+					//файл шрифта должен меть названиее шрифта и его жирность через чёрточку
 					let fontFileName = fontsFiles[i].split('.')[0];
 					if (newFileOnly !== fontFileName) {
 						let fontName = fontFileName.split('-')[0]
@@ -109,6 +110,7 @@ gulp.task('fontsStyle', () => {
 						}
 						fs.appendFile(
 							fontsFile,
+							//здесь добавляется параметр font-display: swap, ну и собственно путь к нему
 							`@font-face {\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`,
 							cb
 						);
