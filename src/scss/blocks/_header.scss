@@ -2,6 +2,12 @@
 	position: relative;
 	background-color: rgba($color: #ffffff, $alpha: 0);
 	padding: 30px 135px 0px;
+	@include mobile {
+		padding: 10px 0px;
+	}
+	@include tablet {
+		padding: 10px 10px;
+	}
 	&__row {
 		display: flex;
 		justify-content: space-between;
