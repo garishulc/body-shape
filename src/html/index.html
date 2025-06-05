@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Стартовый шаблон | ВебКадеми</title>
+  <title>Body Shape</title>
   <link rel="stylesheet" href="./css/main.css" />
 
   <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
@@ -16,12 +16,13 @@
   @@include('blocks/header.html')
   <main class="main-page">
     <section>
-      <div class="container-half-right">
+      <div class="container-half-right main-page-container">
         <img class="main-page__hero-logo" src="./../img/hero/hero-logo.png" alt="Alt">
       </div>
       @@include('blocks/bg-image.html')
     </section>
   </main>
+  @@include('blocks/trainers.html')
   @@include('blocks/footer.html')
 
   <script src="./js/index.bundle.js"></script>
