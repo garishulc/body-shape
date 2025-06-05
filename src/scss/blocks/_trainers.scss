@@ -2,7 +2,8 @@
   @media (hover: none) and (pointer: coarse) {
   }
 }
-.container {
+.trainers__content {
+  margin-top: 150px;
 }
 .trainers__description {
 }
@@ -16,6 +17,14 @@
   text-align: center;
 }
 .trainers__images {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  row-gap: 35px;
+  column-gap: 30px;
+  justify-content: center;
 }
 .trainers__img {
+  max-width: 268px;
+  border-radius: 20px;
 }
