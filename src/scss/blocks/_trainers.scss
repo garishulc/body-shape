@@ -25,6 +25,38 @@
   justify-content: center;
 }
 .trainers__img {
-  max-width: 268px;
   border-radius: 20px;
+}
+.trainers__img-container {
+  max-width: 268px;
+  position: relative;
+}
+
+.trainers__img-gradient {
+  position: relative;
+}
+.trainers__img-gradient::after {
+  content: ""; /*пустой контент*/
+  position: absolute; /*позионирование относительно старшего блока*/
+  top: 0; /*позиционирование абсолюное, относительно более главного блока*/
+  left: 0;
+  width: 100%; /*размер по ширине и высоте относительное старшего элемента*/
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  border-radius: 20px; /*градиент*/
+  pointer-events: none; /* Чтобы клики проходили сквозь слой */
+}
+
+.trainers__img-container-text::after {
+  padding: 0px 20px;
+  content: "vincenzo graham";
+  // font-size: 42px;
+  // font-family: var(--font-accent);
+  // font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 }
