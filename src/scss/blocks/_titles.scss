@@ -11,6 +11,9 @@
 	font-weight: bold;
 	font-family: var(--font-titles);
 	color: var(--accent);
+	@include mobile {
+		font-size: 60px;
+	}
 }
 
 .title-3 {
@@ -18,11 +21,15 @@
 	font-size: 75px;
 	font-weight: 700;
 	font-family: var(--font-titles);
+	@include mobile {
+		font-size: 45px;
+	}
 }
 
 .title-4 {
 	// margin: 1em 0 0.5em;
-	font-size: 42px;
+	font-size: 70px;
 	font-weight: 700;
+	color: var(--accent);
 	font-family: var(--font-titles);
 }

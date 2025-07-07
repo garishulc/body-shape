@@ -188,10 +188,66 @@
 				</div>
 			</div>
 		</section>
+		<section class="contacts">
+			<div class="contacts__container">
+				<div class="contacts__content">
+					<h3 class="contacts__title title-4">НАПИСАТЬ НАМ</h3>
+					<div class="contacts__form">
+						<form id="contactForm" action="send-mail.php" method="post" class="conntacts__form-name">
+							<!--Your name-->
+							<div class="form__group form__group-name">
+								<label for="name" class="">Ваше имя</label>
+								<input placeholder="Юрий" type="text" id="name" name="name" class="" required />
+							</div>
+							<!--Email-->
+							<div class="form__group form__group-email">
+								<label for="email" class="">Email</label>
+								<input placeholder="info@mail.com" type="email" id="email" name="email" class="" required />
+							</div>
+							<!--Message-->
+							<div class="form__group form__group-message">
+								<label for="message" class="">Сообщение</label>
+								<textarea
+									placeholder="Меня зовут Юрий, и я заинтересован в ваших услугах. Хотелось бы узнать больше о программах тренировок и возможностях записи. Заранее спасибо за ответ!"
+									class="form__group-texarea"
+									name="message"
+									id="message"
+									rows="5"
+									required
+								></textarea>
+							</div>
+							<!--button submit-->
+							<button type="submit" class="contacts__button">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 		<footer class="footer">
 			<div class="container">
-				<div class="footer__copyright">
-					<p>Вроде всее права защищены <a href="#" target="_blank"></a></p>
+				<div class="footer__content">
+					<div class="footer__social-icons">
+						<a href="" class="footer__social-icon footer__social-icon-vk"><img src="./img/socials/vk.svg" alt="" class="footer__social-img"/></a>
+
+						<a href="" class="footer__social-icon footer__social-icon-rutube"><img src="./img/socials/rutube.svg" alt="" class="footer__social-img"/></a>
+
+						<a href="" class="footer__social-icon footer__social-icon-dzen"><img src="./img/socials/dzen.svg" alt="" class="footer__social-img"/></a>
+
+						<a href="" class="footer__social-icon footer__social-icon-telegramm"><img src="./img/socials/telegram.svg" alt="" class="footer__social-img"/></a>
+					</div>
+					<div class="footer__description">
+						<div class="footer__adress">
+							<p class="footer__adress-text">г. Москва, ул.&#160;Тверская, д.&#160;12, стр.&#160;1</p>
+							<p class="footer__adress-index">Россия, 125009</p>
+						</div>
+						<div class="footer__contact">
+							<p class="footer__phone">Телефон +7&#160;(800-12)&#160;3-45-67</p>
+							<!-- <a class="footer__phone" type="number" href="">Телефон +7 (800) 12 34 567
+					</a> -->
+							<p class="footer__email">info@bodyshape.ru</p>
+							<!-- <a  type="email" href="">info@bodyshape.ru</a> -->
+						</div>
+					</div>
 				</div>
 			</div>
 		</footer>
