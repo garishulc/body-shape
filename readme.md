@@ -20,5 +20,5 @@ gulp
 ```
 gulp docs
 ```
-
+проосмотр данного проэкта [[https://garishulc.github.io/body-shape/]]
 
